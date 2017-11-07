@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Hacked Password Checker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically check your passwords against a known list of hacked passwords",
   "author": "Nathan MacInnes",
   "icons": {
@@ -13,7 +13,13 @@
   },
   "browser_action": {
     "default_title": "Hacked Password Checker",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "24": "icons/24.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png"
+    }
   },
   "background": {
     "scripts": ["background.js"]
