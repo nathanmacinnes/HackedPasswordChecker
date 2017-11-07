@@ -1,0 +1,55 @@
+/** random message **/
+.random:not(.visible) {
+	display: none;
+}
+
+/** initially hide random messages **/
+p.no-pwnage:not(.visible),
+.no-pwnage.visible~p.random.visible {
+	display: none;
+}
+
+/** pluralize **/
+span.plural,
+.pluralize span.singular {
+	display: none;
+}
+.pluralize span.plural {
+	display: inline;
+}
+
+/** password hiding **/
+span.hidden {
+	-webkit-text-security: disc;
+}
+span.password {
+	cursor: hand;
+}
+
+/** box a bit wider **/
+body {
+	font-size: 1.2em;
+	width: 28rem;
+}
+
+/** make it look pretty **/
+article {
+	border-top: thin lightgrey solid;
+	border-bottom: thin lightgrey solid;
+	position: relative;
+}
+article>button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0);
+	color: lightgrey;
+	border: none;
+	hover: hand;
+}
+article>button:hover {
+	color: darkgrey;
+}
+p.attribution {
+	font-size: 0.8rem;
+}

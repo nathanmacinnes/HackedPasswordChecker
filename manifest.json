@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Hacked Password Checker",
+  "version": "0.1.0",
+  "description": "Automatically check your passwords against a known list of hacked passwords",
+  "author": "Nathan MacInnes",
+  "icons": {
+    "16": "icons/16.png",
+    "24": "icons/24.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "browser_action": {
+    "default_title": "Hacked Password Checker",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "exclude_matches": ["https://haveibeenpwned.com/*"],
+      "js": ["jquery-3.2.1.slim.min.js", "content_script.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions" : [
+    "https://haveibeenpwned.com/*",
+    "https://*.macinn.es/*",
+    "storage"
+  ]
+}

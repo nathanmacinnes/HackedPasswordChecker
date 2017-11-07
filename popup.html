@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>List of pwned passwords</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <p class="no-pwnage visible">
+        Nothing to see here (yet). Passwords you enter are being checked
+        to make sure they haven't been hacked. Don't worry; the passwords are sent
+        <em>encrypted</em>, kept <em>anonymous</em> and <em>aren't stored </em>
+        anywhere.
+      </p>
+      <p class="random">
+        The password<span class="plural">s</span> for the account shown below <span class="plural">have</span><span class="singular">has</span> been hacked!
+        Change <span class="plural">them</span><span class="singular">it</span> as soon as possible.
+      </p>
+      <p class="random">
+        You have <span class="singular">a</span> hacked password<span class="plural">s</span>. Get <span class="plural">them</span><span class="singular">it</span> changed on the double!
+      </p>
+      <p class="random">
+        Oh no. The password<span class="plural">s</span> for <span class="singular">this account is</span><span class="plural">these accounts are</span> on a list of known passwords.
+      </p>
+      <p class="random">
+        A 1337 h4x0r has pwned your a$$. Your password<span class="plural">s</span> belong<span class="singular">s</span> to him or her.
+      </p>
+    </header>
+    <section>
+      <template>
+        <article>
+          <button class="remove">X</button>
+          <div><strong>Site:</strong> <span class="domain"></span></div>
+          <div><strong>Username:</strong> <span class="username"></span></div>
+          <div><strong>Password:</strong> <span class="password hidden"></span></div>
+        </article>
+      </template>
+    </section>
+    <footer>
+      <div class="no-pwnage visible"></div>
+      <p class="random">
+        Remembering passwords is hard. A password manager makes it easier.
+      </p>
+      <p class="random">
+        Password re-use is
+        <a href="http://xkcd.com/792" target="_blank">dangerous</a>. Password
+        managers can keep you safe.
+      </p>
+      <p class="random">
+        Try a password manager. They randomly generate new passwords to stop
+        them appearing on this list.
+      </p>
+      <p class="random">
+        <a href="https://www.troyhunt.com/only-secure-password-is-one-you-cant/"
+        target="_blank">The only secure password is the one you can't remember.
+        </a>
+      </p>
+      <p class="attribution">
+        Data provided by
+        <a href="https://haveibeenpwned.com/">haveibeenpwned.com</a>.
+      </p>
+    </footer>
+    <script src="jquery-3.2.1.slim.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
